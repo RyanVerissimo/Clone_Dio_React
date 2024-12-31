@@ -31,9 +31,9 @@ export const TextContent = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     width: 420px;
     margin-bottom: 20px;
-    line-height: 22px;
+    line-height: 24px;
     color: #FFFFFF;
 `
