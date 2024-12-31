@@ -84,7 +84,7 @@ const Register = () => {
                                 variant="Senconday" 
                                 type="submit"
                             />
-                            {message && <RegisterMessage>Email de recuperação enviado com sucesso.</RegisterMessage>} {}
+                            {message && <RegisterMessage>Cadastro realizado com sucesso.</RegisterMessage>} {}
                             <DeclarationText>Ao clicar em &quot;criar minha conta grátis&quot;, declaro que aceito as Políticas de Privacidade e os Termos de Uso da DIO.</DeclarationText>
                         </form>
                         <Row>
