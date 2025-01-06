@@ -9,6 +9,7 @@ import * as yup from "yup"
 
 import { Column, Container, CriarText, EsqueciText, Row, SubTitleLogin, Title, TitleLogin, Wrapper } from './styles'
 import { api } from '../../services/api'
+import { IFormData } from './types'
 
 
 const schema = yup
@@ -25,7 +26,7 @@ const Login = () => {
         control,
         handleSubmit,
         formState: { errors }
-      } = useForm({
+      } = useForm<IFormData>({
         resolver: yupResolver(schema),
         mode: 'onChange',
         defaultValues: {
@@ -35,7 +36,7 @@ const Login = () => {
       })
 
 
-      const onSubmit = async FormData => {
+      const onSubmit = async (FormData: IFormData) => {
         try {
             const { data } = await api.get(`users?email=${FormData.email}&senha=${FormData.password}`)
             if(data.length === 1) {

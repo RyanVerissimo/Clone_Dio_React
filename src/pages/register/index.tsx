@@ -8,6 +8,7 @@ import { Button } from "../../components/Button"
 import { useNavigate } from "react-router-dom"
 import { Column, Container, DeclarationText, HaveAccountText, LogInText, RegisterMessage, Row, SubtitleRegister, Title, TitleRegister, Wrapper } from "./styles"
 import { useState } from "react"
+import { IFormData } from "../login/types"
 
 const schema = yup
   .object({
@@ -36,7 +37,7 @@ const Register = () => {
 
     const [message, setMessage] = useState(false)
 
-    const onSubmit = async (FormData) => {
+    const onSubmit = async (FormData: IFormData) => {
         console.log(FormData)
         setMessage(true)  
 

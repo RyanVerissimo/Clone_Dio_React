@@ -10,7 +10,7 @@ const Forgot = () => {
     const [message, setMessage] = useState(false)
     const [error, setError] = useState("")  
 
-    const handleEmailChange = (e) => {
+    const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
         setEmail(e.target.value)  
     }
 
